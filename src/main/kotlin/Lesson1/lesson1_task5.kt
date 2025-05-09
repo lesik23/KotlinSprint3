@@ -4,11 +4,13 @@ fun main() {
 
     val seconds: Short = 6480
 
-    val minute = seconds/60
-    println(minute)
-    val hours = minute/60
-    println(hours)
+    val minute = seconds / 60
+    val hours = minute / 60
 
-    val ostOfMinute = 6480%3600
-    println(ostOfMinute)
+    val remainingSeconds = seconds % 60
+    val remainingMinut = minute % 60
+
+    println("Время проведённое Гагариным в космосе:")
+    println("0" + hours + ":" + remainingMinut + ":" + remainingSeconds + "0" )
+
 }
