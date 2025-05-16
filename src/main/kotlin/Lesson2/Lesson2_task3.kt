@@ -15,4 +15,5 @@ fun main() {
     val arrivalMinutes = (departureMinutes + minutesOfWay) - totalHours * minutesPerHour
     print(arrivalMinutes)
 
+
 }
