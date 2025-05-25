@@ -11,6 +11,7 @@ fun main() {
         println("Вход запрещён")
     }
 
+
 }
 
 const val RIGHT_ANSWER = 10
