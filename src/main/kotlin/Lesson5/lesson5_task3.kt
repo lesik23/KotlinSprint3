@@ -3,25 +3,24 @@ package org.example.Lesson5
 fun main() {
 
     print("Попробуйте угадать два числа от 0 до 42. Введите первое число: ")
-    var numberOne = readln().toInt()
+    val numberOne = readln().toInt()
     print("Введите второе число: ")
-    var numberTwo = readln().toInt()
-    if (numberOne == RIGHT_NUMBER_ONE || numberOne == RIGHT_NUMBER_TWO && numberTwo == RIGHT_NUMBER_TWO || numberTwo == RIGHT_NUMBER_ONE)
+    val numberTwo = readln().toInt()
+    val winNumber1 = (0..42).random()
+    val winNumber2 = (0..42).random()
+
+    if (numberOne == winNumber1 || numberOne == winNumber2 && numberTwo == winNumber2 || numberTwo == winNumber1)
     {
         println("Поздравляем, вы выиграли!")
     }
-    else if (numberOne == RIGHT_NUMBER_ONE || numberOne == RIGHT_NUMBER_TWO || numberTwo == RIGHT_NUMBER_TWO || numberTwo == RIGHT_NUMBER_ONE)
+    else if (numberOne == winNumber1 || numberOne == winNumber2 || numberTwo == winNumber2 || numberTwo == winNumber1)
     {
         println("Вы выиграли утешительный приз!")
-        println("Правильный ответ: 11 и 22")
+        println("Правильный ответ: $winNumber1 и $winNumber2")
     } else
     {
         println("Неудача!")
-        println("Правильный ответ: 11 и 22")
+        println("Правильный ответ: $winNumber1 и $winNumber2")
     }
 
 }
-
-
-const val RIGHT_NUMBER_ONE = 11
-const val RIGHT_NUMBER_TWO = 22
