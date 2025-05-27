@@ -14,7 +14,7 @@ fun main() {
         bodyMassIndex >= 18.5 && bodyMassIndex < 25 -> "нормальная масса тела."
         bodyMassIndex >= 25 && bodyMassIndex <= 30 -> "избыточная масса тела."
         bodyMassIndex >= 30 -> "Ожирение"
-        else -> "Ошибка"
+        else -> "Ошибка "
     }
     val formatedBMI = String.format("%.2f", bodyMassIndex)
     println("Ваш индекс массы тела равен $formatedBMI. Это означает,что у вас $categoryBMI")
