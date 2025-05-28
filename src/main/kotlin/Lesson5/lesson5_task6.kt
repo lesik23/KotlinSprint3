@@ -14,7 +14,7 @@ fun main() {
     val averageBMI = 25
     val highBMI = 30
     val categoryBMI = when {
-        bodyMassIndex < 18.5 -> "недостаточная масса тела."
+        bodyMassIndex < 18.5 -> "недостаточная масса тела. "
         bodyMassIndex >= lowBMI && bodyMassIndex < averageBMI -> "нормальная масса тела."
         bodyMassIndex >= averageBMI && bodyMassIndex <= highBMI -> "избыточная масса тела."
         bodyMassIndex >= highBMI -> "Ожирение"
