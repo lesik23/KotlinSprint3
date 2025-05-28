@@ -6,14 +6,18 @@ fun main() {
     val weight = readln().toFloat()
     print("Ведите ваш рост в сантиметрах: ")
     val height = readln().toFloat()
-    val heightInMeters = height / 100
+    val cmInMeters = 100
+    val heightInMeters = height / cmInMeters
     val heightSquared = heightInMeters * heightInMeters
     val bodyMassIndex = weight / heightSquared
+    val lowBMI = 18.5
+    val averageBMI = 25
+    val highBMI = 30
     val categoryBMI = when {
         bodyMassIndex < 18.5 -> "недостаточная масса тела."
-        bodyMassIndex >= 18.5 && bodyMassIndex < 25 -> "нормальная масса тела."
-        bodyMassIndex >= 25 && bodyMassIndex <= 30 -> "избыточная масса тела."
-        bodyMassIndex >= 30 -> "Ожирение"
+        bodyMassIndex >= lowBMI && bodyMassIndex < averageBMI -> "нормальная масса тела."
+        bodyMassIndex >= averageBMI && bodyMassIndex <= highBMI -> "избыточная масса тела."
+        bodyMassIndex >= highBMI -> "Ожирение"
         else -> "Ошибка "
     }
     val formatedBMI = String.format("%.2f", bodyMassIndex)
