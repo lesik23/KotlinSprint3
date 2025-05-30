@@ -1,4 +1,5 @@
 package org.example.Lesson2
+
 import kotlin.math.pow
 
 fun main() {
@@ -8,9 +9,8 @@ fun main() {
     val years = 20
     val compoudingsPerYear = 1
 
-    val totalAmount = initialAmount *(1 + interestRate / compoudingsPerYear).pow(compoudingsPerYear * years)
+    val totalAmount = initialAmount * (1 + interestRate / compoudingsPerYear).pow(compoudingsPerYear * years)
     val formatedTotalAmount: String = String.format("%.3f", totalAmount)
     println(formatedTotalAmount)
-
 
 }
